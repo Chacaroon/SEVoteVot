@@ -206,30 +206,7 @@ def is_exist_vote_in_chat(chat_id):
 
 bot.polling()
 
-
 # ========================================== #
-@app.route('/', methods=['POST', 'GET'])
-def setWebhook():
-    if request.method == 'GET':
-        logging.info('Hello, Telegram!')
-        print("Done")
-        return 'ok'
-    print(str(request.get_json(force=True)))
-    logging.info("Calling {}".format(update.message))
-    return 'ok'
-
-
-@app.route('/verify', methods=['POST'])
-def verification():
-    return 'ok'
-
-
-def handle_message(msg):
-    text = msg.text
-    print(msg)
-    bot.send_message(chat_id=msg.chat.id, text=text)
-
-
 bot_name = "SE_Vote_Bot"
 
 if __name__ == "__main__":
