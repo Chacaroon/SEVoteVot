@@ -3,12 +3,9 @@ import telebot
 import db.index
 from db.models.vote_model import Vote
 import re
-from flask import Flask
 import logging
 
 bot = telebot.TeleBot("694338190:AAGcL2_b_SMxSxooMCDxw5anK_2j0-5iFus", threaded=False)
-
-app = Flask(__name__)
 
 logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 
@@ -200,12 +197,5 @@ def is_exist_vote_in_chat(chat_id):
 
     return votes_count > 0
 
-
-@app.route("/")
-def fff():
-    return 'ok'
-
-
-app.run(host="0.0.0.0", debug=True)
 
 bot.polling()
