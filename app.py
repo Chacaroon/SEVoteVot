@@ -1,5 +1,6 @@
 # coding=utf-8
 import telebot
+from flask import Flask
 import db.index
 from db.models.vote_model import Vote
 import re
@@ -199,3 +200,8 @@ def is_exist_vote_in_chat(chat_id):
 
 
 bot.polling()
+
+app = Flask(__name__)
+
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", debug=True)
