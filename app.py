@@ -221,8 +221,7 @@ def setWebhook():
 
 @app.route('/verify', methods=['POST'])
 def verification():
-    if request.method == "POST":
-        return 'ok'
+    return 'ok'
 
 
 def handle_message(msg):
