@@ -204,7 +204,7 @@ def is_exist_vote_in_chat(chat_id):
 @app.route("/")
 def webhook():
     bot.remove_webhook()
-    bot.set_webhook(url="https://se-voter.herokuapp.com/")
+    bot.set_webhook(url="https://se-voter.herokuapp.com/bot")
     return "!", 200
 
 
