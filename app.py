@@ -6,7 +6,7 @@ import re
 from flask import Flask
 import logging
 
-bot = telebot.TeleBot("694338190:AAGcL2_b_SMxSxooMCDxw5anK_2j0-5iFus")
+bot = telebot.TeleBot("694338190:AAGcL2_b_SMxSxooMCDxw5anK_2j0-5iFus", threaded=False)
 
 app = Flask(__name__)
 
@@ -201,5 +201,11 @@ def is_exist_vote_in_chat(chat_id):
     return votes_count > 0
 
 
-bot.polling()
+@app.route("/")
+def webhook():
+    bot.remove_webhook()
+    bot.set_webhook(url="https://se-voter.herokuapp.com/")
+    return "!", 200
 
+
+bot.polling()
