@@ -4,10 +4,12 @@ import db.index
 from db.models.vote_model import Vote
 import re
 from flask import Flask
+from flask import request
 import logging
 
 bot = TeleBot("694338190:AAGcL2_b_SMxSxooMCDxw5anK_2j0-5iFus")
 HOST = "https://se-voter.herokuapp.com"
+
 
 app = Flask(__name__)
 
@@ -122,8 +124,6 @@ def increase_case_count(message):
 
     case = vote.cases[case_number]
 
-    # count = case["count"] + 1
-
     get_vote_by_chat_id(message.chat.id, False).update({
         "$inc": {
             "cases." + str(case_number) + ".count": 1
@@ -209,7 +209,7 @@ bot.polling()
 
 # ========================================== #
 @app.route('/', methods=['POST', 'GET'])
-def set_webhook():
+def setWebhook():
     if request.method == 'GET':
         logging.info('Hello, Telegram!')
         print("Done")
@@ -229,7 +229,7 @@ def verification():
     if request.method == "POST":
         update = telegram.Update.de_json(request.get_json(force=True), bot)
         if update is None:
-            return "Show me your TOKEN please!"
+            return  "Show me your TOKEN please!"
         logging.info("Calling {}".format(update.message))
         handle_message(update.message)
         return 'ok'
