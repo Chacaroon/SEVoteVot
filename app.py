@@ -3,8 +3,16 @@ from telebot import TeleBot
 import db.index
 from db.models.vote_model import Vote
 import re
+from flask import Flask
+import logging
 
 bot = TeleBot("694338190:AAGcL2_b_SMxSxooMCDxw5anK_2j0-5iFus")
+HOST = "https://se-voter.herokuapp.com"
+
+
+app = Flask(__name__)
+
+logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 
 
 @bot.message_handler(commands=['start'])
@@ -197,4 +205,46 @@ def is_exist_vote_in_chat(chat_id):
     return votes_count > 0
 
 
-bot.polling()
+# ========================================== #
+@app.route('/', methods=['POST', 'GET'])
+def setWebhook():
+    if request.method == 'GET':
+        logging.info('Hello, Telegram!')
+        print("Done")
+        return 'ok'
+    print(str(request.get_json(force=True)))
+    update = telegram.Update.de_json(request.get_json(force=True), bot)
+    if update is None:
+        print("Show me your TOKEN please!")
+        return "Show me your TOKEN please!"
+    logging.info("Calling {}".format(update.message))
+    handle_message(update.message)
+    return 'ok'
+
+
+@app.route('/verify', methods=['POST'])
+def verification():
+    if request.method == "POST":
+        update = telegram.Update.de_json(request.get_json(force=True), bot)
+        if update is None:
+            return  "Show me your TOKEN please!"
+        logging.info("Calling {}".format(update.message))
+        handle_message(update.message)
+        return 'ok'
+
+
+def handle_message(msg):
+    text = msg.text
+    print(msg)
+    bot.send_message(chat_id=msg.chat.id, text=text)
+
+
+bot_name = "SE_Vote_Bot"
+
+if __name__ == "__main__":
+    s = bot.set_webhook("{}/verify".format(HOST))
+    if s:
+        logging.info("{} WebHook Setup Ok!".format(bot_name))
+    else:
+        logging.info("{} WebHook Setup Failed!".format(bot_name))
+    app.run(host="0.0.0.0", debug=True)
