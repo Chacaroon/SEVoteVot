@@ -215,10 +215,6 @@ def setWebhook():
         print("Done")
         return 'ok'
     print(str(request.get_json(force=True)))
-    update = telegram.Update.de_json(request.get_json(force=True), bot)
-    if update is None:
-        print("Show me your TOKEN please!")
-        return "Show me your TOKEN please!"
     logging.info("Calling {}".format(update.message))
     handle_message(update.message)
     return 'ok'
@@ -227,10 +223,6 @@ def setWebhook():
 @app.route('/verify', methods=['POST'])
 def verification():
     if request.method == "POST":
-        update = telegram.Update.de_json(request.get_json(force=True), bot)
-        if update is None:
-            return  "Show me your TOKEN please!"
-        logging.info("Calling {}".format(update.message))
         handle_message(update.message)
         return 'ok'
 
