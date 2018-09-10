@@ -216,14 +216,12 @@ def setWebhook():
         return 'ok'
     print(str(request.get_json(force=True)))
     logging.info("Calling {}".format(update.message))
-    handle_message(update.message)
     return 'ok'
 
 
 @app.route('/verify', methods=['POST'])
 def verification():
     if request.method == "POST":
-        handle_message(update.message)
         return 'ok'
 
 
