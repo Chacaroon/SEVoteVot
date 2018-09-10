@@ -2,12 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d1bad9fe-7abb-4673-8d96-5203f57b402f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/runtime.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,26 +12,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="296">
-              <caret line="241" column="23" selection-start-line="241" selection-start-column="23" selection-end-line="241" selection-end-column="23" />
+            <state relative-caret-position="2939">
+              <caret line="206" column="11" lean-forward="true" selection-start-line="206" selection-start-column="11" selection-end-line="206" selection-end-column="11" />
               <folding>
                 <element signature="e#15#42#0" expanded="true" />
-                <marker date="1536587183483" expanded="true" signature="4300:4752" ph="..." />
-                <marker date="1536587183483" expanded="true" signature="5949:6157" ph="..." />
+                <marker date="1536587541042" expanded="true" signature="4299:4751" ph="..." />
+                <marker date="1536587541042" expanded="true" signature="5948:6156" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/runtime.txt">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/requirements.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="12" selection-start-column="11" selection-end-column="12" />
-            </state>
+            <state relative-caret-position="-258" />
           </provider>
         </entry>
       </file>
@@ -192,18 +184,18 @@
     <frame x="0" y="0" width="1920" height="1035" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49171272" visible="true" weight="0.18028466" />
-      <window_info id="Structure" order="1" sideWeight="0.5082873" side_tool="true" visible="true" weight="0.18028466" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49177632" visible="true" weight="0.18028466" />
+      <window_info id="Structure" order="1" sideWeight="0.5082237" side_tool="true" visible="true" weight="0.18028466" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32929516" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3289183" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3289183" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.40066224" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.40066224" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32929516" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.3289183" />
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.3289183" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32929516" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -254,16 +246,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/requirements.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/runtime.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="12" selection-start-column="11" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Procfile">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -274,16 +256,28 @@
     <entry file="file://$PROJECT_DIR$/venv/lib/python3.7/site-packages/telebot/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/runtime.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="12" selection-start-column="11" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="241" column="23" selection-start-line="241" selection-start-column="23" selection-end-line="241" selection-end-column="23" />
+        <state relative-caret-position="2939">
+          <caret line="206" column="11" lean-forward="true" selection-start-line="206" selection-start-column="11" selection-end-line="206" selection-end-column="11" />
           <folding>
             <element signature="e#15#42#0" expanded="true" />
-            <marker date="1536587183483" expanded="true" signature="4300:4752" ph="..." />
-            <marker date="1536587183483" expanded="true" signature="5949:6157" ph="..." />
+            <marker date="1536587541042" expanded="true" signature="4299:4751" ph="..." />
+            <marker date="1536587541042" expanded="true" signature="5948:6156" ph="..." />
           </folding>
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-258" />
       </provider>
     </entry>
   </component>
