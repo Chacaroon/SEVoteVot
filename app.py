@@ -1,15 +1,12 @@
 # coding=utf-8
-from telebot import TeleBot
+import telebot
 import db.index
 from db.models.vote_model import Vote
 import re
 from flask import Flask
-from flask import request
 import logging
 
-bot = TeleBot("694338190:AAGcL2_b_SMxSxooMCDxw5anK_2j0-5iFus")
-HOST = "https://se-voter.herokuapp.com"
-
+bot = telebot.TeleBot("694338190:AAGcL2_b_SMxSxooMCDxw5anK_2j0-5iFus")
 
 app = Flask(__name__)
 
@@ -206,13 +203,3 @@ def is_exist_vote_in_chat(chat_id):
 
 bot.polling()
 
-# ========================================== #
-bot_name = "SE_Vote_Bot"
-
-if __name__ == "__main__":
-    s = bot.set_webhook("{}/verify".format(HOST))
-    if s:
-        logging.info("{} WebHook Setup Ok!".format(bot_name))
-    else:
-        logging.info("{} WebHook Setup Failed!".format(bot_name))
-    app.run(host="0.0.0.0", debug=True)
