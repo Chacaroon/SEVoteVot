@@ -42,15 +42,15 @@ def add_title(message):
         return
 
     theme = re.sub("^\s+|\s+$", "", theme, flags=re.UNICODE)
-
-    add_vote_to_database(author=message.from_user.username, chat_id=message.chat.id, title=theme)
-
+    
+    add_vote_to_database(chat_id=message.chat.id, title=theme)
+    
     bot.send_message(message.chat.id, "Добавьте первый вариант.\n"
                                       "Чтобы это сделать, воспользуйтесь командой /addcase <вариант>")
 
 
-def add_vote_to_database(author, chat_id, title):
-    vote = Vote(author=author, chat_id=chat_id, title=title)
+def add_vote_to_database(chat_id, title):
+    vote = Vote(chat_id=chat_id, title=title)
 
     vote.save()
 
