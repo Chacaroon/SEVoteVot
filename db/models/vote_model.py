@@ -4,7 +4,6 @@ from pymodm import fields, MongoModel
 
 class Vote(MongoModel):
     title = fields.CharField()
-    author = fields.CharField()
     cases = fields.ListField()
     is_completed = fields.BooleanField(default=False)
     chat_id = fields.IntegerField()
